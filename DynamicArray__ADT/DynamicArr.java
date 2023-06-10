@@ -1,4 +1,6 @@
+
 package DynamicArray__ADT;
+
 
 import java.util.Iterator;
 
@@ -14,7 +16,8 @@ class DynamicArr<T> implements Iterable<T> {
 
     public DynamicArr(int capacity) {
         if (capacity <= 0)
-            throw new IllegalArgumentException("Capacity cannot be negative: " + capacity);
+            throw new IllegalArgumentException(
+                    "Capacity cannot be negative: " + capacity);
         this.capacity = capacity;
         arr = (T[]) new Object[capacity];
     }
@@ -63,7 +66,8 @@ class DynamicArr<T> implements Iterable<T> {
             throw new ArrayIndexOutOfBoundsException();
         else {
             T[] newArr = (T[]) new Object[size - 1];
-            for (int oldArrIndex = 0, newArrIndex = 0; oldArrIndex < size; oldArrIndex++, newArrIndex++) {
+            for (int oldArrIndex = 0,
+                    newArrIndex = 0; oldArrIndex < size; oldArrIndex++, newArrIndex++) {
                 if (removeIndex == oldArrIndex)
                     newArrIndex--;
                 else
